@@ -26,7 +26,14 @@
   a.shot { display:block; margin:0 0 1.4rem; }
   a.shot img { width:100%; height:auto; border-radius:10px; border:1px solid #1e1e1e; display:block; }
   h1 { font-size:1.5rem; font-weight:600; margin:0 0 .5rem; letter-spacing:.2px; }
-  p.lede { color:#a9a9a9; margin:0 auto 1.5rem; max-width:62ch; }
+  p.lede { color:#a9a9a9; margin:0 auto 1.2rem; max-width:62ch; }
+  .controls { text-align:left; max-width:54ch; margin:0 auto 1.5rem; padding:.85rem 1.1rem;
+              background:#0e0e0e; border:1px solid #1e1e1e; border-radius:10px;
+              font-size:.93rem; color:#bdbdbd; }
+  .controls .h { font-weight:600; color:#e9e9e9; margin:0 0 .4rem; letter-spacing:.3px; }
+  .controls p { margin:.28rem 0; }
+  .controls strong { color:#e9e9e9; font-weight:600; }
+  .controls .keys { color:#9fb6cf; }
   a.cta { display:inline-block; padding:.72rem 1.5rem; border-radius:8px;
           background:#1f6feb; color:#fff; font-weight:600; text-decoration:none; }
   a.cta:hover { background:#388bfd; }
@@ -38,7 +45,12 @@
   <main class="card">
     <a class="shot" href="./demo.html"><img src="preview.png" alt="4D-UMAP point cloud with colored identity clusters"></a>
     <h1>4D-UMAP + HDBSCAN interactive identity clustering</h1>
-    <p class="lede">A self-contained three.js visualization of unsupervised identity discovery: object detections embedded with 4D-UMAP and clustered with HDBSCAN, explorable with a colored 3D-slice. Pan, zoom, and step through the slice.</p>
+    <p class="lede">A self-contained three.js visualization of unsupervised identity discovery: object detections embedded with 4D-UMAP and clustered with HDBSCAN, shown as a colored 3D slice of the 4D embedding.</p>
+    <div class="controls">
+      <div class="h">Explore</div>
+      <p>Hover a colored point to reveal its <strong>object ID</strong>; linger to highlight the object's whole <strong>4D cluster</strong>.</p>
+      <p class="keys">Left-drag to rotate &nbsp;&middot;&nbsp; right-drag to pan &nbsp;&middot;&nbsp; wheel to zoom.</p>
+    </div>
     <a class="cta" href="./demo.html">Open the interactive demo</a>
     <div class="meta">Best on desktop (loads a large in-browser dataset). &nbsp;|&nbsp; <a href="https://github.com/serge-tochilov/umap-4d-identity-demo">Source on GitHub</a></div>
   </main>
